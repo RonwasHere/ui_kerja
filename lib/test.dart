@@ -29,6 +29,12 @@ class TestPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/satu');
+                },
+                child: Text('ke- form 1'),
+              ),
             ],
           ),
         ),

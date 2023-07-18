@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kerja/form_satu.dart';
 import 'package:ui_kerja/halaman_utama.dart';
 import 'package:ui_kerja/test.dart';
 
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           '/': (context) => TestPage(),
+          '/satu': (context) => FormSatu(),
+          
         },
       ),
     );
