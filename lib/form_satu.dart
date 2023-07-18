@@ -37,12 +37,12 @@ class _FormSatuState extends State<FormSatu> {
               ),
               MaterialButton(
                 onPressed: () async {
-                  Navigator.pushNamed(context, '/dua');
-                  
+                  // Navigator.pushNamed(context, '/dua');
+
                   // Navigator.of(contex, rootNavigator: true).pop('dialog');
-                  // await Navigator.of(context).pop('dialog')
-                  //     .push(MaterialPageRoute(builder: (context) => FormDua()));
-                  
+                  Navigator.pop(contex);
+                  await Navigator.of(context)                      
+                      .push(MaterialPageRoute(builder: (context) => FormDua()));
                 },
                 child: Text('Yes'),
               ),
