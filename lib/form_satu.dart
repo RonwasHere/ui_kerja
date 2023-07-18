@@ -1,7 +1,47 @@
 import 'package:flutter/material.dart';
 
-class FormSatu extends StatelessWidget {
+class FormSatu extends StatefulWidget {
   const FormSatu({Key? key}) : super(key: key);
+
+  @override
+  State<FormSatu> createState() => _FormSatuState();
+}
+
+class _FormSatuState extends State<FormSatu> {
+  void no() {
+    // Navigator.of(context).pop();
+    //ini yg benar
+    Navigator.of(context, rootNavigator: true).pop('dialog');
+  }
+
+  Future<void> _showDialog() async {
+    showDialog(
+        context: context,
+        // barrierDismissible: false,
+        builder: (contex) {
+          return AlertDialog(
+            backgroundColor: Colors.amber,
+            title: Text('Cek Data !! '),
+            content:
+                Text('Pastikan kembali data yang anda masukan sudah sesuai?'),
+            actions: [
+              MaterialButton(
+                onPressed: () {
+                  // Navigator.pop(context);
+                  // Navigator.pop(context, 'OK');
+                  // Navigator.of(context).pop();
+                  no();
+                },
+                child: Text('NO'),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Text('Yes'),
+              ),
+            ],
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -126,12 +166,16 @@ class FormSatu extends StatelessWidget {
                 Row(
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
                       child: Text('kembali'),
                     ),
                     Spacer(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _showDialog();
+                      },
                       child: Text('selanjutnya'),
                     ),
                   ],
