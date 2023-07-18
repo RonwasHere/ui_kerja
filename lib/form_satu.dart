@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_kerja/form_dua.dart';
 
 class FormSatu extends StatefulWidget {
   const FormSatu({Key? key}) : super(key: key);
@@ -35,7 +36,14 @@ class _FormSatuState extends State<FormSatu> {
                 child: Text('NO'),
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () async {
+                  Navigator.pushNamed(context, '/dua');
+                  
+                  // Navigator.of(contex, rootNavigator: true).pop('dialog');
+                  // await Navigator.of(context).pop('dialog')
+                  //     .push(MaterialPageRoute(builder: (context) => FormDua()));
+                  
+                },
                 child: Text('Yes'),
               ),
             ],
