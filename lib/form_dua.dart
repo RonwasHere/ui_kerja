@@ -8,6 +8,40 @@ class FormDua extends StatefulWidget {
 }
 
 class _FormDuaState extends State<FormDua> {
+  void no() {
+    Navigator.of(context, rootNavigator: true).pop('dialog');
+  }
+
+  Future<void> _showDialog() async {
+    showDialog(
+        context: context,
+        // barrierDismissible: false,
+        builder: (contex) {
+          return AlertDialog(
+            backgroundColor: Colors.amber,
+            title: Text('Cek Data !! '),
+            content:
+                Text('Pastikan kembali data yang anda masukan sudah sesuai?'),
+            actions: [
+              MaterialButton(
+                onPressed: () {
+                  no();
+                },
+                child: Text('NO'),
+              ),
+              MaterialButton(
+                onPressed: () async {
+                  Navigator.pop(contex);
+                  await Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => FormDua()));
+                },
+                child: Text('Yes'),
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,63 +93,63 @@ class _FormDuaState extends State<FormDua> {
                 Text('nama lengkap'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('mobile'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('email'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('jabatan'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('provinsi'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('kota'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('kecamatan'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('kelurahan'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('kode pos'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
@@ -126,20 +160,51 @@ class _FormDuaState extends State<FormDua> {
                   ),
                 ),
                 SizedBox(height: 2),
-                Text('usaha'),
+                Text('foto'),
                 TextFormField(
                   decoration: InputDecoration(
                     hintText: 'usaha',
                   ),
                 ),
                 SizedBox(height: 2),
-                Text('usaha'),
+                Text('aplikasi'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'usaha',
+                    hintText: '',
                   ),
                 ),
                 SizedBox(height: 2),
+                Text('status'),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: '',
+                  ),
+                ),
+                SizedBox(height: 2),
+                Text('remarkss'),
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: '',
+                  ),
+                ),
+                SizedBox(height: 2),
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/satu');
+                      },
+                      child: Text('cek kembali'),
+                    ),
+                    Spacer(),
+                    TextButton(
+                      onPressed: () {
+                        _showDialog();
+                      },
+                      child: Text('selanjutnya'),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
