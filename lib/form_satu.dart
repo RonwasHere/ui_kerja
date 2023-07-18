@@ -19,101 +19,101 @@ class FormSatu extends StatelessWidget {
                 Text('usaha'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'email',
+                    hintText: 'usaha',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('nama usaha'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'nama usaha',
                   ),
                 ),
                 Text('jabatan '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'jabatan',
                   ),
                 ),
                 Text('usaha'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'email',
+                    hintText: 'usaha',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('nama usaha'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'nama usaha',
                   ),
                 ),
                 Text('jabatan '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'jabatan',
                   ),
                 ),
                 Text('telepon'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'email',
+                    hintText: 'telepon',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text(' website'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'website',
                   ),
                 ),
                 Text('nama NPWP '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'nama npwp',
                   ),
                 ),
                 Text('NIK'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'email',
+                    hintText: 'nik',
                   ),
                 ),
                 SizedBox(height: 2),
                 Text('alamat kantor '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'alamat kantor',
                   ),
                 ),
                 Text('nama lengkap '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'nama lengkap',
                   ),
                 ),
                 Text(' mobile  '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'mobile',
                   ),
                 ),
                 Text(' email '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'email',
                   ),
                 ),
                 Text('no NPWP '),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'no npwp',
                   ),
                 ),
                 Text('alamat NPWP'),
                 TextFormField(
                   decoration: InputDecoration(
-                    hintText: 'password',
+                    hintText: 'alamat npwp',
                   ),
                 ),
                 Text(' account representative'),
@@ -123,7 +123,19 @@ class FormSatu extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10),
-                
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('kembali'),
+                    ),
+                    Spacer(),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('selanjutnya'),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
