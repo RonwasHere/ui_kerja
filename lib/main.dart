@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ui_kerja/form_dua.dart';
 import 'package:ui_kerja/form_satu.dart';
-import 'package:ui_kerja/halaman_utama.dart';
+import 'package:ui_kerja/gambar.dart';
+import 'package:ui_kerja/table_page.dart';
 import 'package:ui_kerja/test.dart';
 
 void main() {
@@ -21,6 +22,8 @@ class MyApp extends StatelessWidget {
           '/': (context) => TestPage(),
           '/satu': (context) => FormSatu(),
           '/dua': (context) => FormDua(),
+          '/table': (context) => TablePage(),
+          '/gambar': (context) => GambarPage(),
           
         },
       ),

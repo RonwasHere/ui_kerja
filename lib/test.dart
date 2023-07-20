@@ -35,6 +35,18 @@ class TestPage extends StatelessWidget {
                 },
                 child: Text('ke- form 1'),
               ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/gambar');
+                },
+                child: Text('ke- hlmn gambar'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/table');
+                },
+                child: Text('ke- hlmn sorting table'),
+              ),
             ],
           ),
         ),

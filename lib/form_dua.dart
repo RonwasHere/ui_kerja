@@ -189,14 +189,8 @@ class _FormDuaState extends State<FormDua> {
                 ),
                 SizedBox(height: 2),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/satu');
-                      },
-                      child: Text('cek kembali'),
-                    ),
-                    Spacer(),
                     TextButton(
                       onPressed: () {
                         _showDialog();
