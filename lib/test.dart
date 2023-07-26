@@ -47,6 +47,24 @@ class TestPage extends StatelessWidget {
                 },
                 child: Text('ke- hlmn sorting table'),
               ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/maps');
+                },
+                child: Text('ke- hlmn maps'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/mapswithcluster');
+                },
+                child: Text('ke- hlmn maps with cluster'),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/mapswithclusterdua');
+                },
+                child: Text('ke- hlmn maps with cluster Versi-2'),
+              ),
             ],
           ),
         ),

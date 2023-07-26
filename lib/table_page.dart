@@ -11,12 +11,6 @@ class TablePage extends StatefulWidget {
 class _TablePageState extends State<TablePage> {
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   appBar: AppBar(
-    //     title: Text('testing table'),
-    //   ),
-    // );
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: DefaultTabController(

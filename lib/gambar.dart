@@ -7,12 +7,22 @@ class GambarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ini hlmn gambar', style: TextStyle(fontSize: 40,),),
+        title: Text(
+          'ini hlmn gambar',
+          style: TextStyle(
+            fontSize: 40,
+          ),
+        ),
       ),
       body: Column(
-       children: [
-        Text('ini testing'),
-       ],
+        children: [
+          Text(
+            'ini testing',
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+        ],
       ),
     );
   }
