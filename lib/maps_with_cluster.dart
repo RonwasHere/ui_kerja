@@ -23,7 +23,8 @@ class MapsWithCluster extends StatelessWidget {
                 TileLayer(
                     urlTemplate:
                         'https://tile.openstreetmap.org/{z}/{x}/{y}.png'),
-                MarkerLayer(markers: [
+                MarkerLayer(
+                markers: [
                   Marker(
                     width: 30.0,
                     height: 30.0,
